@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Edit Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit page</h1>
+        <div class="row">
+            <div class="col-sm-6 mt-5">
+                <h2 class="text-center">Add Users</h2>
+                <form method="post" action="/update/<%= data._id %>">   
+                    <div class="mb-3">
+                        <label for="" class="form-label">Username</label>
+                        <input type="text" class="form-control" name="Username" placeholder="Username" value="<%= data.Username %>"><br>
+                        <label for="" class="form-label">Password</label>
+                        <input type="text" class="form-control" name="Password" placeholder="Password" value="<%= data.Password %>"><br>
+    
+                        <button type="submit" class="btn btn-danger">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
